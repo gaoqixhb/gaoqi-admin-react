@@ -1,0 +1,65 @@
+{
+  "name": "gaoqi-admin-react",
+  "version": "1.0.0",
+  "description": "admin for gaoqi-blog based on react",
+  "main": "app/main.jsx",
+  "scripts": {
+    "lint": "eslint 'app/**/*.@(js|jsx)'",
+    "lint:msg": "validate-commit-msg",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --devtool eval --progress --hot --colors --content-base app",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "validate": "npm ls",
+    "commit": "git cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1"
+  },
+  "dependencies": {
+    "babel-runtime": "6.x",
+    "react": "15.x",
+    "react-dom": "15.x"
+  },
+  "devDependencies": {
+    "babel-core": "6.x",
+    "babel-eslint": "6.x",
+    "babel-loader": "6.x",
+    "babel-plugin-transform-runtime": "6.x",
+    "babel-preset-es2015": "6.x",
+    "babel-preset-react": "6.x",
+    "babel-preset-stage-0": "6.x",
+    "commitizen": "^2.5.0",
+    "conventional-changelog-cli": "1.x",
+    "copy-webpack-plugin": "2.x",
+    "css-loader": "~0.23.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "eslint": "2.x",
+    "eslint-config-airbnb": "7.x",
+    "eslint-plugin-jsx-a11y": "0.x",
+    "eslint-plugin-react": "4.x",
+    "ghooks": "^1.0.3",
+    "open-browser-webpack-plugin": "0.0.2",
+    "style-loader": "~0.13.0",
+    "validate-commit-msg": "2.x",
+    "webpack": "1.x",
+    "webpack-dev-server": "1.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoyjx/gaoqi-admin-react.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "gaoqi",
+    "admin"
+  ],
+  "author": "luoyjx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luoyjx/gaoqi-admin-react/issues"
+  },
+  "homepage": "https://github.com/luoyjx/gaoqi-admin-react#readme"
+}
