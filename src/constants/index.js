@@ -1,0 +1,19 @@
+/**
+ * types 
+ * @authors yanjixiong 
+ * @date    2016-07-12 16:59:21
+ */
+
+module.exports = {
+  TREE_FORWARD: 'TREE_FORWARD',
+  TREE_BACK: 'TREE_BACK',
+
+  SEARCH_PEOPLE: 'SEARCH_PEOPLE',
+  SEARCH_PUBLIC_ACCOUNT: 'SEARCH_PUBLIC_ACCOUNT',
+  SEARCH_GROUP: 'SEARCH_GROUP',
+
+  INIT: 'INIT',
+
+  GET_CHILDREN: 'GET_CHILDREN',
+
+}

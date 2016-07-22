@@ -1,19 +1,87 @@
 {
-  "env": {
-    "node": true
-  },
-  ecmaFeatures: {
-    jsx: true
-  },
-  "globals": {
-  },
-  "plugins": [
+  extends: 'airbnb',
+  plugins: [
+      'react',
   ],
-  "extends": "eslint-config-airbnb",
-  "rules": {
-    "comma-dangle": 0,
-    "no-console": 0,
-    "id-length": 0,
-    "react/prop-types": 0
+
+  "ecmaFeatures": {
+    "jsx": true
+  },
+
+  env: {
+      es6     : true,
+      browser : true,
+      commonjs: true,
+  },
+  rules: {
+    'semi'                         : 'off',
+    
+    'indent'                       : ['error', 2],
+    
+    // only dangle comments with multiline objs
+    'comma-dangle'                 : ['warn', 'always-multiline'],
+    
+    // Errs if you need to use quotes, but ignores other cases.
+    'quote-props'                  : ['error', 'as-needed', { 
+        'keywords' : false, 
+        unnecessary: false, 
+    }],
+
+    'prefer-arrow-callback': [
+      'error', 
+      { 
+        'allowNamedFunctions': true 
+      }
+    ],
+
+    // generous use of spaces is nice. 
+    // finer grained control gets weird
+    'key-spacing'                  : ['off', {
+        beforeColon: false, 
+        afterColon : true, 
+        mode       : 'minimum',
+    }],
+    
+    'no-trailing-spaces'           : 'off',
+    
+    // generous object formatting {sometimes works best}
+    'object-curly-spacing'         : 'off',
+    
+    // allows var for backwards compatibility
+    'no-var'                       : 'off',
+    
+    // allows anon functions
+    'func-names'                   : 'off',
+    
+    // allows string concat
+    'prefer-template'              : 'off',
+
+    // allows '///'
+    'spaced-comment'               : ['warn', 'always', {exceptions: ['/']}],
+
+    // allows more empty lines
+    'no-multiple-empty-lines'      : ['warn', {'max': 4}],
+
+    'space-before-function-paren'  : 'off',
+
+    'object-shorthand'             : 'off',
+
+
+    ////////////////////////
+    // REACT CUSTOM RULES //
+    ////////////////////////
+    
+    // allow React.createClass()
+    'react/prefer-es6-class'    : 'off',
+    
+    // allow import { x } from 'react'
+    'react/react-in-jsx-scope'  : 'off',
+
+    // warn for prop-types
+    'react/prop-types'          : 'warn',
+
+    'react/prefer-stateless-function': 'off',
+
+    'react/jsx-closing-bracket-location': [1, {selfClosing: 'props-aligned', nonEmpty: 'after-props'}]
   }
 }

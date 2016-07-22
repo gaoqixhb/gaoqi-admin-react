@@ -1,12 +1,8 @@
 {
-  "presets": [ "es2015", "stage-0", "react"],
-
-  /* if you want to use babel runtime, uncomment the following line */
-  // "plugins": ["transform-runtime"],
-
+  "presets": ["es2015", "react"],
   "env": {
-    "build": {
-      "optional": ["optimisation", "minification"]
+    "development": {
+      "presets": ["react-hmre"]
     }
   }
 }
