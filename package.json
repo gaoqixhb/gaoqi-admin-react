@@ -19,6 +19,7 @@
   },
   "homepage": "http://redux.js.org",
   "dependencies": {
+    "antd": "^1.7.0",
     "babel-polyfill": "^6.3.14",
     "classnames": "^2.1.2",
     "eslint": "^2.7.0",
