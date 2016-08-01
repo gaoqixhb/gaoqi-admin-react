@@ -9,9 +9,9 @@ var store = configureStore()
 
 render(
   <Provider store={store}>
-    <Router >
+    <Router history={browserHistory}>
       {routes}
     </Router>
   </Provider>,
-  document.getElementById('contacts')
+  document.getElementById('gaoqi-admin')
 )
