@@ -19,7 +19,11 @@
   },
   "homepage": "http://redux.js.org",
   "dependencies": {
+<<<<<<< HEAD
     "antd": "^1.8.0",
+=======
+    "antd": "^1.7.0",
+>>>>>>> f990c6f968c1e49d9655eb34c93c515cf77ddb14
     "babel-polyfill": "^6.3.14",
     "classnames": "^2.1.2",
     "eslint": "^2.7.0",
