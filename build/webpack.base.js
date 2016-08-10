@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        loaders: ['style', 'raw'],
+        loaders: ['style', 'css', 'raw'],
         include: path.resolve(process.cwd(), './src'),
       },
     ],

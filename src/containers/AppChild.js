@@ -3,22 +3,14 @@
  * @authors yanjixiong 
  * @date    2016-07-11 16:39:17
  */
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import SearchBox from '../components/SearchBox';
+import TypeList from '../components/TypeList';
+import ContactsContainer from '../components/ContactsContainer';
 
-var React = require('react');
-var connect = require('react-redux').connect;
-var SearchBox = require('../components/SearchBox');
-var TypeList = require('../components/TypeLIst');
-var ContactsContainer = require('../components/ContactsContainer');
-
-
-var AppChild = React.createClass({
-  
-  propTypes: {
-    contactsList: React.PropTypes.array,
-    status: React.PropTypes.object,
-  },
-
-  render: function() {
+class AppChild extends Component {
+  render() {
     return (
       <div>
         <SearchBox />
@@ -28,9 +20,14 @@ var AppChild = React.createClass({
           status={this.props.status}
           />
       </div>
-    );
-  },
-});
+    )
+  }
+}
+
+AppChild.propTypes = {
+  contactsList: React.PropTypes.array,
+  status: React.PropTypes.array,
+}
 
 function mapStateToProps(state) {
   return {
@@ -39,4 +36,4 @@ function mapStateToProps(state) {
   }
 }
 
-module.exports = connect(mapStateToProps)(AppChild);
+export default connect(mapStateToProps)(AppChild);
