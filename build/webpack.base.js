@@ -7,6 +7,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var NodeModules =  path.resolve(__dirname, "../node_modules");
 
 module.exports = {
   entry: {
@@ -19,6 +20,7 @@ module.exports = {
       'react-redux',
       'react-router',
       'redux',
+      'antd',
     ],
   },
   output: {
@@ -46,9 +48,16 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        loaders: ['style', 'css', 'raw'],
-        include: path.resolve(process.cwd(), './src'),
+        loaders: ['style', 'css'],
       },
     ],
+  },
+
+  resolve: {
+      extensions:['','.js','.json','.css'],
+      alias: {
+          //'react-dom':  path.join(NodeModules,   "/react-dom/dist/react-dom"),
+          'antd':  path.join(NodeModules,   '/antd')
+      }
   },
 };

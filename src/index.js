@@ -7,6 +7,8 @@ var configureStore = require('./store/configureStore');
 var routes = require('./routes');
 var store = configureStore()
 
+import 'antd/dist/antd.css';
+
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
