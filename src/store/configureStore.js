@@ -1,16 +1,16 @@
-var createStore = require('redux').createStore;
-var rootReducer = require('../reducers');
+import { createStore } from 'redux'
+import rootReducer from '../reducers'
 
+export default function configureStore(preloadedState) {
+  const store = createStore(rootReducer, preloadedState)
 
-module.exports = function configureStore(preloadedState) {
-  var store = createStore(rootReducer, preloadedState)
-
-  if (module.hot) {
+  if ( module.hot ) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => {
-      var nextReducer = require('../reducers')
+      const nextReducer = require('../reducers')
       store.replaceReducer(nextReducer)
     })
   }
-  return store;
+
+  return store
 }

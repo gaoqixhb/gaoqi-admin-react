@@ -1,11 +1,11 @@
-var React = require('react');
-var render = require('react-dom').render;
-var Provider = require('react-redux').Provider;
-var Router = require('react-router').Router;
-var browserHistory = require('react-router').browserHistory;
-var configureStore = require('./store/configureStore');
-var routes = require('./routes');
-var store = configureStore()
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import configureStore from './store/configureStore';
+import routes from './routes';
+
+const store = configureStore();
 
 import 'antd/dist/antd.css';
 

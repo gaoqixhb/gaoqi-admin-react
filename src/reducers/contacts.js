@@ -4,9 +4,9 @@
  * @date    2016-07-12 18:22:25
  */
 
-var types = require('../constants');
+import types from '../constants'
 
-module.exports = function constants(state, action) {
+export default function constants(state, action) {
   var newArr;
   var oldState = !state 
   ? {

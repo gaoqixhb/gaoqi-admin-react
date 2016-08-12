@@ -8,6 +8,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var NodeModules =  path.resolve(__dirname, "../node_modules");
+var AssetsPath = path.resolve(__dirname, '../src/assets');
 
 module.exports = {
   entry: {
@@ -47,17 +48,18 @@ module.exports = {
         include: path.resolve(process.cwd(), './src'),
       },
       {
-        test: /\.css?$/,
-        loaders: ['style', 'css'],
+        test: /(\.css|\.scss)$/,
+        loaders: ['style', 'css', 'sass'],
       },
     ],
   },
 
   resolve: {
-      extensions:['','.js','.json','.css'],
+      extensions:['','.js','.json','.css', 'scss'],
       alias: {
           //'react-dom':  path.join(NodeModules,   "/react-dom/dist/react-dom"),
-          'antd':  path.join(NodeModules,   '/antd')
+          'antd': path.join(NodeModules,   '/antd'),
+          'assets': AssetsPath
       }
   },
 };
